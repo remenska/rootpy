@@ -8,7 +8,7 @@ rootpy: Pythonic ROOT
 .. image:: https://img.shields.io/pypi/v/rootpy.svg
    :target: https://pypi.python.org/pypi/rootpy
 .. image:: https://travis-ci.org/rootpy/rootpy.png
-   :target: https://travis-ci.org/rootpy/rootpy
+   :target: https://travis-ci.org/remenska/rootpy
 .. image:: https://img.shields.io/pypi/dm/rootpy.svg
    :target: https://pypi.python.org/pypi/rootpy
 .. image:: https://zenodo.org/badge/doi/10.5281/zenodo.18897.svg
