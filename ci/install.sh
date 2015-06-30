@@ -38,7 +38,7 @@ time tar zxf ${ROOT_BUILD}.tar.gz
 mv ${ROOT_BUILD} root
 source root/bin/thisroot.sh
 
-# lets try this
-export PYTHONPATH=/home/travis/.local/lib/python${TRAVIS_PYTHON_VERSION}/site-packages:$PYTHONPATH
+# lets try this, FIX LATER
+export PYTHONPATH=`python${TRAVIS_PYTHON_VERSION}-config --exec-prefix`/lib/python${TRAVIS_PYTHON_VERSION}/site-packages:$PYTHONPATH
 # Install the master branch of root_numpy
 git clone https://github.com/rootpy/root_numpy.git && (cd root_numpy && python setup.py install)
