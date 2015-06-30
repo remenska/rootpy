@@ -23,7 +23,7 @@ if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then
     time sudo apt-get install -qq python${PYTHON_SUFFIX}-matplotlib python${PYTHON_SUFFIX}-tables
 fi
 
-if [[ $PYTHON_SUFFIX == '3']]; then
+if [[ $PYTHON_SUFFIX == '3' ]]; then
     sudo apt-get install python${PYTHON_SUFFIX}-setuptools
     sudo easy_install${PYTHON_SUFFIX} pip
     pip${PYTHON_SUFFIX} install uncertainties
