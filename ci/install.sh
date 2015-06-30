@@ -16,6 +16,7 @@ sudo apt-get -qq update
 sudo apt-get -qq install g++-4.8
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 90
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+sudo apt-get update
 sudo apt-get install -qq python${PYTHON_SUFFIX}-pip python${PYTHON_SUFFIX}-numpy python${PYTHON_SUFFIX}-sphinx python${PYTHON_SUFFIX}-nose
 
 # matplotlib and PyTables are not available for Python 3 as packages from the main repo yet.
