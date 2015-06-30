@@ -23,7 +23,11 @@ if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then
     time sudo apt-get install -qq python${PYTHON_SUFFIX}-matplotlib python${PYTHON_SUFFIX}-tables
 fi
 
-pip install uncertainties
+if [[ $PYTHON_SUFFIX == '3']]; then
+    pip${PYTHON_SUFFIX} install uncertainties
+else
+    pip install uncertainties
+fi
 
 # Install the ROOT binary
 ROOT_BUILD=ROOT-${ROOT}_Python-${TRAVIS_PYTHON_VERSION}_GCC-4.8_x86_64
