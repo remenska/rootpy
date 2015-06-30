@@ -16,7 +16,7 @@ sudo apt-get -qq update
 sudo apt-get -qq install g++-4.8
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 90
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
-sudo apt-get install -qq python${PYTHON_SUFFIX}-pip python${PYTHON_SUFFIX}-numpy python${PYTHON_SUFFIX}-sphinx python${PYTHON_SUFFIX}-nose
+sudo apt-get install -qq python${PYTHON_SUFFIX}-numpy python${PYTHON_SUFFIX}-sphinx python${PYTHON_SUFFIX}-nose
 
 # matplotlib and PyTables are not available for Python 3 as packages from the main repo yet.
 if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then
@@ -24,7 +24,7 @@ if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then
 fi
 
 if [[ $PYTHON_SUFFIX == '3' ]]; then
-    sudo apt-get install python${PYTHON_SUFFIX}-setuptools
+    sudo apt-get install -qq python${PYTHON_SUFFIX}-setuptools
     sudo easy_install${PYTHON_SUFFIX} pip
     pip${PYTHON_SUFFIX} install uncertainties
 else
