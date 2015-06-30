@@ -4,7 +4,7 @@ virtualenv:
     system_site_packages: true
 python:
     - "2.7"
-    #- "3.4"
+    - "3.4"
 env:
     - ROOT=5.34.18
     - ROOT=master
