@@ -39,6 +39,6 @@ mv ${ROOT_BUILD} root
 source root/bin/thisroot.sh
 
 # lets try this, FIX LATER
-export PYTHONPATH=${VIRTUAL_ENV}/lib/python${TRAVIS_PYTHON_VERSION}/site-packages:$PYTHONPATH
+export PYTHONPATH=/home/travis/.local/lib/python${TRAVIS_PYTHON_VERSION}/site-packages:$PYTHONPATH
 # Install the master branch of root_numpy
 git clone https://github.com/rootpy/root_numpy.git && (cd root_numpy && python setup.py install)
