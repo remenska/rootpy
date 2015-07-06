@@ -28,11 +28,11 @@ if [[ $PYTHON_SUFFIX == '3' ]]; then
     sudo easy_install${PYTHON_SUFFIX} pip
     pip${PYTHON_SUFFIX} install uncertainties
     pip${PYTHON_SUFFIX} install matplotlib
-    pip${PYTHON_SUFFIX} install tables
+    # pip${PYTHON_SUFFIX} install tables
 else
     pip install uncertainties
     pip install matplotlib
-    pip install tables
+    # pip install tables
 fi
 
 # Install the ROOT binary
