@@ -71,7 +71,7 @@ test-code-verbose: inplace
 
 test-installed:
 	@(mkdir -p nose && cd nose && \
-	$(NOSETESTS) -v -a '!slow' -s --exe rootpy && \
+	$(NOSETESTS) -v -s --exe rootpy && \
 	cd .. && rm -rf nose)
 
 test-doc:
