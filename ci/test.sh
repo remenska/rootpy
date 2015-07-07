@@ -24,7 +24,7 @@ time python -c 'from ROOT import kTRUE; import rootpy'
 # Give user write access to shared memory to make multiprocessing semaphares work
 # https://github.com/rootpy/rootpy/pull/176#issuecomment-13712313
 ls -la /dev/shm
-sudo rm -rf /dev/shm && sudo ln -s /run/shm /dev/shm
+rm -rf /dev/shm && ln -s /run/shm /dev/shm
 #- sudo chmod a+w /dev/shm
 ls -la /dev/shm
 

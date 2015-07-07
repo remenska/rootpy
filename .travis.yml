@@ -1,5 +1,5 @@
 # travis-ci.org build & test configuration
-sudo: required
+sudo: false
 language: python
 #virtualenv:
 #    system_site_packages: true

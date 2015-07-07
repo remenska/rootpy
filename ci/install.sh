@@ -11,29 +11,29 @@ if [[ $TRAVIS_PYTHON_VERSION == '3.4' ]]; then
     export PYTHON_SUFFIX="3"
 fi
 
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-sudo apt-get -qq update
-sudo apt-get -qq install g++-4.8
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 90
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
-sudo apt-get install -qq python${PYTHON_SUFFIX}-numpy python${PYTHON_SUFFIX}-sphinx python${PYTHON_SUFFIX}-nose
-sudo apt-get install libhdf5-serial-dev hdf5-tools
-
+add-apt-repository -y ppa:ubuntu-toolchain-r/test
+apt-get -qq update
+apt-get -qq install g++-4.8
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 90
+update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+apt-get install -qq python${PYTHON_SUFFIX}-numpy python${PYTHON_SUFFIX}-sphinx python${PYTHON_SUFFIX}-nose
+apt-get -qq install libhdf5-serial-dev hdf5-tools
+apt-get install -qq liblzo2-dev uuid-dev
 # matplotlib and PyTables are not available for Python 3 as packages from the main repo yet.
 if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then
     time sudo apt-get install -qq python${PYTHON_SUFFIX}-matplotlib python${PYTHON_SUFFIX}-tables
 fi
 
 if [[ $PYTHON_SUFFIX == '3' ]]; then
-    sudo apt-get install -qq python${PYTHON_SUFFIX}-setuptools
-    sudo easy_install${PYTHON_SUFFIX} pip
+    apt-get install -qq python${PYTHON_SUFFIX}-setuptools
+    easy_install${PYTHON_SUFFIX} pip
     pip${PYTHON_SUFFIX} install uncertainties
     pip${PYTHON_SUFFIX} install matplotlib
-     pip${PYTHON_SUFFIX} install tables
+    pip${PYTHON_SUFFIX} install tables
 else
     pip install uncertainties
     pip install matplotlib
-     pip install tables
+    pip install tables
 fi
 
 # Install the ROOT binary
