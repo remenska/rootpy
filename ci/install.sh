@@ -27,13 +27,13 @@ fi
 if [[ $PYTHON_SUFFIX == '3' ]]; then
     sudo apt-get install -qq python${PYTHON_SUFFIX}-setuptools
     sudo easy_install${PYTHON_SUFFIX} pip
-    pip${PYTHON_SUFFIX} install uncertainties
-    pip${PYTHON_SUFFIX} install matplotlib
-     pip${PYTHON_SUFFIX} install tables
+    pip${PYTHON_SUFFIX} install -q uncertainties
+    pip${PYTHON_SUFFIX} install -q matplotlib
+    pip${PYTHON_SUFFIX} install -q tables
 else
-    pip install uncertainties
-    pip install matplotlib
-     pip install tables
+    pip install -q uncertainties
+    pip install -q matplotlib
+    pip install -q tables
 fi
 
 # Install the ROOT binary
