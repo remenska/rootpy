@@ -268,6 +268,7 @@ def test_csv():
         true_output_filename = testdata.get_filepath('test_csv.txt')
     else:
         true_output_filename = testdata.get_filepath('test_csv_new.txt')
+
     with open(true_output_filename, 'r') as true_output_file:
         true_output = true_output_file.read()
         assert_equal(output.getvalue(), true_output)
